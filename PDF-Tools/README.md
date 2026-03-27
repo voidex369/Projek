@@ -18,13 +18,13 @@ Full-stack PDF manipulation platform dengan Next.js + FastAPI, containerized den
 - [Architecture](#architecture)
 - [Project Structure](#project-structure)
 - [Development](#development)
-- [Monitoring & Maintenance](#monitoring--maintenance)
+- [Monitoring & Maintenance](#monitoring-maintenance)
 - [Known Limitations](#known-limitations)
 - [License](#license)
 
 ---
 
-## ✨ Features
+## ✨ Features {#features}
 
 | Category | Tools |
 |----------|-------|
@@ -35,7 +35,7 @@ Full-stack PDF manipulation platform dengan Next.js + FastAPI, containerized den
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start {#quick-start}
 
 ```bash
 cd Projek/PDF-Tools
@@ -50,13 +50,13 @@ Wait ~2 minutes for build. Then open:
 
 ---
 
-## 📋 Prerequisites
+## 📋 Prerequisites {#prerequisites}
 
 - Docker Engine (>=20.10) & Docker Compose (v2)
 - 2 GB RAM minimum (4+ GB recommended)
 - Ports 3000 and 8000 open in firewall
 
-### Install Docker (Ubuntu/Debian)
+### Install Docker (Ubuntu/Debian) {#install-docker-ubuntudebian}
 
 ```bash
 sudo apt update
@@ -67,9 +67,9 @@ newgrp docker
 
 ---
 
-## 🏭 Production Deployment
+## 🏭 Production Deployment {#production-deployment}
 
-### 1. Initial Setup
+### 1. Initial Setup {#initial-setup}
 
 ```bash
 # Transfer project files to server
@@ -83,7 +83,7 @@ docker compose up -d
 docker compose ps
 ```
 
-### 2. Reverse Proxy (Nginx) + SSL
+### 2. Reverse Proxy (Nginx) + SSL {#reverse-proxy-nginx--ssl}
 
 ```nginx
 # /etc/nginx/sites-available/pdf-tools
@@ -115,7 +115,7 @@ sudo nginx -t && sudo systemctl reload nginx
 # Get SSL: certbot --nginx -d yourdomain.com
 ```
 
-### 3. Firewall
+### 3. Firewall {#firewall}
 
 Only expose 80/443 publicly.
 
@@ -126,7 +126,7 @@ sudo ufw deny 3000
 sudo ufw deny 8000
 ```
 
-### 4. Auto-Cleanup (Cron)
+### 4. Auto-Cleanup (Cron) {#auto-cleanup-cron}
 
 ```bash
 crontab -e
@@ -134,13 +134,13 @@ crontab -e
 0 * * * * curl -s http://localhost:8000/api/cleanup >/dev/null
 ```
 
-### 5. Persistent Storage (Optional)
+### 5. Persistent Storage (Optional) {#persistent-storage-optional}
 
 Edit `docker-compose.yml` to mount host directories or S3 buckets for `uploads/` and `outputs/`.
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Configuration {#configuration}
 
 Environment variables (edit `docker-compose.yml`):
 
@@ -154,7 +154,7 @@ Environment variables (edit `docker-compose.yml`):
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture {#architecture}
 
 - **Frontend**: Next.js 15 + TypeScript + Tailwind CSS
 - **Backend**: FastAPI + Python 3.11
@@ -163,7 +163,7 @@ Environment variables (edit `docker-compose.yml`):
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure {#project-structure}
 
 ```
 Projek/PDF-Tools/
@@ -183,7 +183,7 @@ Projek/PDF-Tools/
 
 ---
 
-## 💻 Development
+## 💻 Development {#development}
 
 ### Frontend only
 
@@ -203,7 +203,7 @@ uvicorn main:app --reload
 
 ---
 
-## 📊 Monitoring & Maintenance
+## 📊 Monitoring & Maintenance {#monitoring--maintenance}
 
 ### View Logs
 
@@ -234,7 +234,7 @@ curl http://localhost:8000/health
 
 ---
 
-## ⚠️ Known Limitations
+## ⚠️ Known Limitations {#known-limitations}
 
 - **PDF → Word**: placeholder (static text only); true formatting not yet implemented
 - **Compress**: simple copy; no downsample, no stream compression
@@ -246,6 +246,6 @@ Planned: real PDF→Word with layout preservation, image downsampling for compre
 
 ---
 
-## 📄 License
+## 📄 License {#license}
 
 MIT
