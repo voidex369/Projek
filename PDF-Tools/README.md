@@ -11,6 +11,7 @@ Full-stack PDF manipulation platform dengan Next.js + FastAPI, containerized den
 
 ## 📑 Table of Contents
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Quick Start](#quick-start)
 - [Prerequisites](#prerequisites)
 - [Production Deployment](#production-deployment)
@@ -33,6 +34,25 @@ Full-stack PDF manipulation platform dengan Next.js + FastAPI, containerized den
 | **Organize** | Merge, Split, Compress PDF |
 | **UI/UX** | Drag & drop, progress tracking, responsive |
 | **Backend** | Async processing, file validation, auto-cleanup |
+
+---
+
+<a name="screenshots"></a>
+## 📸 Screenshots
+
+Place screenshots in `docs/screenshots/` and reference them here.
+
+<div align="center">
+  <img src="docs/screenshots/homepage.png" alt="Homepage" width="80%"/>
+</div>
+
+*Fig 1. Homepage – tools grid*
+
+<div align="center">
+  <img src="docs/screenshots/merge.png" alt="Merge PDF" width="80%"/>
+</div>
+
+*Fig 2. Merge PDF tool*
 
 ---
 
