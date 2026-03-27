@@ -24,7 +24,8 @@ Full-stack PDF manipulation platform dengan Next.js + FastAPI, containerized den
 
 ---
 
-## ✨ Features {#features}
+<a name="features"></a>
+## ✨ Features
 
 | Category | Tools |
 |----------|-------|
@@ -35,7 +36,8 @@ Full-stack PDF manipulation platform dengan Next.js + FastAPI, containerized den
 
 ---
 
-## 🚀 Quick Start {#quick-start}
+<a name="quick-start"></a>
+## 🚀 Quick Start
 
 ```bash
 cd Projek/PDF-Tools
@@ -50,13 +52,15 @@ Wait ~2 minutes for build. Then open:
 
 ---
 
-## 📋 Prerequisites {#prerequisites}
+<a name="prerequisites"></a>
+## 📋 Prerequisites
 
 - Docker Engine (>=20.10) & Docker Compose (v2)
 - 2 GB RAM minimum (4+ GB recommended)
 - Ports 3000 and 8000 open in firewall
 
-### Install Docker (Ubuntu/Debian) {#install-docker-ubuntudebian}
+<a name="install-docker-ubuntu-debian"></a>
+### Install Docker (Ubuntu/Debian)
 
 ```bash
 sudo apt update
@@ -67,9 +71,11 @@ newgrp docker
 
 ---
 
-## 🏭 Production Deployment {#production-deployment}
+<a name="production-deployment"></a>
+## 🏭 Production Deployment
 
-### 1. Initial Setup {#initial-setup}
+<a name="initial-setup"></a>
+### 1. Initial Setup
 
 ```bash
 # Transfer project files to server
@@ -83,7 +89,8 @@ docker compose up -d
 docker compose ps
 ```
 
-### 2. Reverse Proxy (Nginx) + SSL {#reverse-proxy-nginx--ssl}
+<a name="reverse-proxy-nginx--ssl"></a>
+### 2. Reverse Proxy (Nginx) + SSL
 
 ```nginx
 # /etc/nginx/sites-available/pdf-tools
@@ -115,7 +122,8 @@ sudo nginx -t && sudo systemctl reload nginx
 # Get SSL: certbot --nginx -d yourdomain.com
 ```
 
-### 3. Firewall {#firewall}
+<a name="firewall"></a>
+### 3. Firewall
 
 Only expose 80/443 publicly.
 
@@ -126,7 +134,8 @@ sudo ufw deny 3000
 sudo ufw deny 8000
 ```
 
-### 4. Auto-Cleanup (Cron) {#auto-cleanup-cron}
+<a name="auto-cleanup-cron"></a>
+### 4. Auto-Cleanup (Cron)
 
 ```bash
 crontab -e
@@ -134,13 +143,15 @@ crontab -e
 0 * * * * curl -s http://localhost:8000/api/cleanup >/dev/null
 ```
 
-### 5. Persistent Storage (Optional) {#persistent-storage-optional}
+<a name="persistent-storage-optional"></a>
+### 5. Persistent Storage (Optional)
 
 Edit `docker-compose.yml` to mount host directories or S3 buckets for `uploads/` and `outputs/`.
 
 ---
 
-## ⚙️ Configuration {#configuration}
+<a name="configuration"></a>
+## ⚙️ Configuration
 
 Environment variables (edit `docker-compose.yml`):
 
@@ -154,7 +165,8 @@ Environment variables (edit `docker-compose.yml`):
 
 ---
 
-## 🏗️ Architecture {#architecture}
+<a name="architecture"></a>
+## 🏗️ Architecture
 
 - **Frontend**: Next.js 15 + TypeScript + Tailwind CSS
 - **Backend**: FastAPI + Python 3.11
@@ -163,7 +175,8 @@ Environment variables (edit `docker-compose.yml`):
 
 ---
 
-## 📁 Project Structure {#project-structure}
+<a name="project-structure"></a>
+## 📁 Project Structure
 
 ```
 Projek/PDF-Tools/
@@ -183,7 +196,8 @@ Projek/PDF-Tools/
 
 ---
 
-## 💻 Development {#development}
+<a name="development"></a>
+## 💻 Development
 
 ### Frontend only
 
@@ -203,7 +217,8 @@ uvicorn main:app --reload
 
 ---
 
-## 📊 Monitoring & Maintenance {#monitoring--maintenance}
+<a name="monitoring-maintenance"></a>
+## 📊 Monitoring & Maintenance
 
 ### View Logs
 
@@ -234,7 +249,8 @@ curl http://localhost:8000/health
 
 ---
 
-## ⚠️ Known Limitations {#known-limitations}
+<a name="known-limitations"></a>
+## ⚠️ Known Limitations
 
 - **PDF → Word**: placeholder (static text only); true formatting not yet implemented
 - **Compress**: simple copy; no downsample, no stream compression
@@ -246,6 +262,7 @@ Planned: real PDF→Word with layout preservation, image downsampling for compre
 
 ---
 
-## 📄 License {#license}
+<a name="license"></a>
+## 📄 License
 
 MIT
