@@ -1,0 +1,1 @@
+# Screenshots\n\nAdd screenshot PNG files here:\n- homepage.png\n- merge.png\n- split.png\n- compress.png\n- pdf-to-word.png\n- word-to-pdf.png\n- pdf-to-txt.png\n- txt-to-pdf.png\n- pdf-to-image.png\n- image-to-pdf.png
